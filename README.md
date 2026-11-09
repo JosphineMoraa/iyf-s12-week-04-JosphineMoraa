@@ -1,25 +1,26 @@
-# Week 4: JavaScript Fundamentals
+# IYF Weekend Academy - Season 12 (Week 4)
 
-JavaScript fundamentals: FizzBuzz, string reversal, array challenges, grade tracker.
-
-## What I Learned
-- Variables, data types, and functions
-- Loops and conditionals
-- Arrays and objects (map, filter, reduce, find)
-- Debugging with the browser console
+## Overview
+This repository contains the completed JavaScript assignments for Week 4, focusing on fundamental programming concepts, error handling, and version control using Git.
 
 ## Projects
-- **FizzBuzz**
-- **Reverse a string**
-- **Largest number in an array**
-- **Remove duplicates from an array**
-- **Palindrome checker**
-- **Student grade tracker**
 
-## How to Run
-1. Clone this repo
-2. Open `index.html` in your browser
-3. Open DevTools (F12) to see the console output
+### 1. Calculator Program (`calculator.js`)
+- Implemented core arithmetic operations (`add`, `subtract`, `multiply`, `divide`).
+- Added zero-division protection to prevent runtime errors.
+- Built a central `calculate` function using a `switch` statement to evaluate operations dynamically.
 
-## Author
-Josphine Moraa - GitHub: [@JosphineMoraa](https://github.com/JosphineMoraa)
+### 2. Student Grade Tracker (`grade-tracker.js`)
+- Created data structures to track grades for **Josphine** and **Joy**.
+- Developed functions to compute individual grade averages.
+- Implemented logic to evaluate and display the top-performing student.
+
+---
+
+## How to Run the Programs
+
+Make sure you have [Node.js](https://nodejs.org/) installed on your machine.
+
+1. Open your terminal (PowerShell) inside the project directory:
+   ```powershell
+   cd ~/OneDrive/Documents/iyf-s12-week-04-JosphineMoraa
