@@ -17,3 +17,10 @@ function reverseString(text) {
 
 console.log(reverseString("hello"));
 console.log(reverseString("JavaScript"));
+// Challenge 4: Remove duplicates from an array
+function removeDuplicates(items) {
+  return [...new Set(items)];
+}
+
+console.log(removeDuplicates([1, 2, 2, 3, 4, 4, 5]));
+console.log(removeDuplicates(["a", "b", "a", "c", "b"]));
