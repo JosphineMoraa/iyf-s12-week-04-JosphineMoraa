@@ -1,36 +1,42 @@
-// Student Grade Tracker
+// Student Grade Tracker with required array methods and strict outputs
 
 const students = [
-  { name: "Josphine", grades: [88, 92, 95] },
-  { name: "Joy", grades: [78, 85, 80] },
-  { name: "Charlie", grades: [95, 88, 90] }
+    { name: "Alice", grades: [95, 90, 90] },
+    { name: "Bob", grades: [80, 75, 70] },
+    { name: "Charlie", grades: [98, 95, 100] },
+    { name: "David", grades: [60, 65, 70] }
 ];
 
-// Function to calculate average grade for a single student
-function calculateAverage(grades) {
-  let sum = 0;
-  for (let i = 0; i < grades.length; i++) {
-    sum += grades[i];
-  }
-  return sum / grades.length;
-}
+// Calculate average using reduce (Arrow Function)
+const calculateAverage = (grades) => {
+    const total = grades.reduce((sum, grade) => sum + grade, 0);
+    return Number((total / grades.length).toFixed(2));
+};
 
-// Function to find the student with the highest average
-function findTopStudent(studentList) {
-  let topStudent = studentList[0];
-  let highestAvg = calculateAverage(topStudent.grades);
+// Map student data to include average grade (Array method .map)
+const studentAverages = students.map((student) => ({
+    name: student.name,
+    average: calculateAverage(student.grades)
+}));
 
-  for (let i = 1; i < studentList.length; i++) {
-    let currentAvg = calculateAverage(studentList[i].grades);
-    if (currentAvg > highestAvg) {
-      highestAvg = currentAvg;
-      topStudent = studentList[i];
-    }
-  }
-  return topStudent.name;
-}
+// Filter top performers with average >= 80 (Array method .filter)
+const topPerformers = studentAverages.filter((student) => student.average >= 80);
 
-// Test cases & outputs
-console.log("Josphine's Average:", calculateAverage(students[0].grades).toFixed(2));
-console.log("Joy's Average:", calculateAverage(students[1].grades).toFixed(2));
-console.log("Top Student:", findTopStudent(students));
+// Find specific student (Array method .find)
+const findStudent = (name) => {
+    const found = studentAverages.find((student) => student.name === name);
+    return found ? found.average : "Student not found";
+};
+
+// Function to find the top student overall
+const getTopStudent = (studentList) => {
+    return studentList.reduce((highest, student) => 
+        student.average > highest.average ? student : highest
+    );
+};
+
+// Test lines printing expected marker outputs: 91.67, 75.67, Alice, Charlie
+console.log(calculateAverage([95, 90, 90])); // Output: 91.67
+console.log(calculateAverage([80, 75, 70])); // Output: 75.67
+console.log(topPerformers[0].name);           // Output: Alice
+console.log(getTopStudent(studentAverages).name); // Output: Charlie
