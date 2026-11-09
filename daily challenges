@@ -1,0 +1,13 @@
+## Daily Challenges
+  
+1. **`fizzbuzz.js`**: Checks numbers divisible by 3, 5, or both using strict conditionals.
+2. **`reverse-string.js`**: Reverses a string using `.split()`, `.reverse()`, and `.join()`.
+3. **`largest-number.js`**: Finds the highest value in an array using `.reduce()`.
+4. **`remove-duplicates.js`**: Filters unique array elements using `.filter()` and `.indexOf()`.
+5. **`palindrome.js`**: Validates palindromes using string cleaning and strict equality (`===`).
+
+## What I Learned
+* **Strict Syntax**: Used `const` and `let` exclusively alongside strict comparison (`===`).
+* **Functional Returns**: Ensured functions compute and `return` values properly.
+* **Array Methods**: Applied `.map()`, `.filter()`, `.reduce()`, and `.find()` effectively.
+* **Version Control**: Managed local and remote Git workflows, folder structures, and repository syncing.
