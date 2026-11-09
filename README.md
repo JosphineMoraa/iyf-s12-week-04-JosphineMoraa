@@ -1,5 +1,3 @@
-# IYF Weekend Academy - Season 12 (Week 4)
-
 ## Overview
 This repository contains the completed JavaScript assignments for Week 4, focusing on fundamental programming concepts, error handling, and version control using Git.
 
