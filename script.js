@@ -24,3 +24,17 @@ function removeDuplicates(items) {
 
 console.log(removeDuplicates([1, 2, 2, 3, 4, 4, 5]));
 console.log(removeDuplicates(["a", "b", "a", "c", "b"]));
+// Challenge 5: Check if a string is a palindrome
+function isPalindrome(str) {
+    // Convert to lowercase and remove non-alphanumeric characters (optional cleanup)
+    const cleaned = str.toLowerCase().replace(/[^a-z0-9]/g, "");
+    
+    // Reverse the string and compare
+    const reversed = cleaned.split("").reverse().join("");
+    return cleaned === reversed;
+}
+
+// Test cases
+console.log(isPalindrome("racecar")); // true
+console.log(isPalindrome("hello"));   // false
+console.log(isPalindrome("A man, a plan, a canal: Panama")); // true
